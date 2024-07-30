@@ -16,7 +16,7 @@ message RegisterRequest {
 }
 
 message RegisterResponse {
-  string token = 1;
+  int32 id = 1;
 }
 
 message GetTokenRequest {
