@@ -2,12 +2,14 @@ syntax = "proto3";
 
 package auth;
 
+import "google/protobuf/empty.proto";
+
 option go_package = "v1.auth;authv1";
 
 service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc GetToken (GetTokenRequest) returns (GetTokenResponse);
-  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse);
+  rpc ValidateToken (ValidateTokenRequest) returns (google.protobuf.Empty);
 }
 
 message RegisterRequest {
@@ -30,9 +32,5 @@ message GetTokenResponse {
 
 message ValidateTokenRequest {
   string token = 1;
-}
-
-message ValidateTokenResponse {
-  bool is_validate = 1;
 }
 
