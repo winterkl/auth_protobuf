@@ -1,4 +1,4 @@
-module github.com/winterkl/protos
+module github.com/winterkl/auth_protobuf
 
 go 1.22
 
